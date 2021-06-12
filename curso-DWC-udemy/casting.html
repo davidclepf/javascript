@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript - Casting</title>
+
+    <script>
+
+        // por padrão as variáveis, quando criadas, são criadas como strings
+        let variavel1 = prompt('Digite um número: ');
+        let variavel2 = prompt('Digite outro número: ');
+
+        // ao tentarmos efetuar a soma de duas variáveis, será feita aconcatenação ao invés da soma
+        document.write("A soma de " + variavel1 +  " com " + variavel2 + " é igual à " + (variavel1 + variavel2) + "<br>");
+        
+        // convertendo a variável para um valor numérico
+        variavel1 = parseInt(variavel1); // parseInt() fará a conversão de string para int
+        variavel2 = parseInt(variavel2); // parseInt() fará a conversão de string para int
+        document.write("A soma de " + variavel1 +  " com " + variavel2 + " é igual à " + (variavel1 + variavel2) + "<br>");
+        
+        // usamos parseInt() para converter para inteiro
+        // e usamos parseFloat() para converter para float 
+        
+        
+        // para converter de numérico para string usamos toString()
+        document.write("Somando duas strings o valor será igual à "  + (variavel1.toString() + variavel2.toString()) + "<br>");
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Curso de JavaScript - Operadores Lógicos</title>
+
+    <style>
+        table {
+            width: 600px;
+        }
+        th {
+            text-align: center;
+           
+        }
+        td {
+            text-align: center;
+        }
+        .linha {
+            background-color: #CCC;
+        }
+        .linha1 {
+            background-color: #EEE;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores Lógicos</h1>
+
+    <table>
+        <tr class="linha">
+            <th>
+                NOME / SIMBOLO
+            </th>
+            <th>
+                FUNÇÃO
+            </th>
+        </tr>
+        <tr class="linha1">
+            <td>
+                E (&&)
+            </td>
+            <td>
+                Verdadeiro se todas as expressões forem verdadeiras
+            </td>
+        </tr>
+        <tr class="linha">
+            <td>
+                OU (||)
+            </td>
+            <td>
+                Verdadeiro se pelo menos uma das expressões for verdadeira
+            </td>
+        </tr>
+        <tr class="linha1">
+            <td>
+                Negação (!)
+            </td>
+            <td>
+                Inverte o resultado da expressão de comparação
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    
+    <h3><u>Testes Lógicos</u></h3>
+
+    <script>
+        document.write("<h4>E (&&)</h4>");
+        // E (&&)
+        // Se 2 é igual a 2 e 3 é maior ou igual a 1
+        // true && true = true
+        if(2 == 2 && 3>= 1) {
+            document.write('Verdadeiro <br>');
+        }
+        // Se 2 é igual a 2 e 3 é maior ou igual a 1 e a for igual a b
+        // true && true && false = false
+        if(2 == 2 && 3>= 1 && 'a' == 'b') {
+            document.write('Verdadeiro');
+        }else {
+            document.write('Falso');
+        }
+
+        document.write('<br>');
+
+        document.write('<h4>OU (||)</h4>');
+        // OU (||)
+        // se 2 for igual a 3 ou 3 for menor que 10
+        // false || true = true
+        if(2 == 3 || 3 < 10) {
+            document.write('Verdadeiro <br>');
+        }
+        
+        // se 2 for igual a 3 ou 3 for maior que 10
+        // false || false = false
+        if(2 == 3 || 3 > 10) {
+            document.write('Verdadeiro');
+        } else {
+            document.write('Falso');
+        }
+        
+        document.write('<br>');
+
+        document.write('<h4>Negação (!)</h4>');
+        // 2 é igual a 4
+        // !false = true
+        if(!(2 == 4)) {
+            document.write('Verdadeiro <br>');
+        }
+        
+        // 2 é igual a 2
+        // !true = false
+        if(!(2 == 2)) {
+            docuement.write('Verdadeiro');
+        } else {
+            document.write('False');
+        }
+
+        document.write('<br>');
+        document.write('<br>');
+        document.write('<hr>');
+        document.write('<br>');
+
+        // o aluno só será aprovado se sua nota for maior ou igual à 7 e suas faltas forem menor ou igual a 15
+        let nota = prompt('Digite a nota do aluno: ');
+        let faltas = prompt('Digite a quantidade de faltas do aluno: ');
+        let media = 7;
+        let faltas_maximas = 15;
+
+        if(nota >= media && faltas <= faltas_maximas) {
+            document.write('Aprovado');
+        } else {
+            document.write('Reprovado');
+        }
+
+        
+    </script>
+
+</body>
+</html>

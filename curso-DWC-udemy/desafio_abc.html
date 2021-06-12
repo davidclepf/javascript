@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <h1>Desafio 1 (Variáveis)</h1>
+
+    <p><strong>Criar 3 variáveis: a = 10, b = 20 e c = null e imprimir o valor das variáveis. Na sequência inverter os valores de a e b usando a variável c como auxiliar para armazenar os valores temporáriamente.</strong></p>
+
+    <script>
+        // declarando as variáveis
+        let a = 10;
+        let b = 20;
+        let c = null;
+
+        // imprimindo o valor das variáveis
+        document.write('<em>Os valores das variáveis são: </em><br>');
+        document.write('O valor da variável "a" = ' + a + '<br>');
+        document.write('O valor da variável "b" = ' + b + '<br>');
+        document.write('O valor da variável "c" = ' + c + '<br>');
+        
+        document.write('<br>');
+        
+        // alterando o valor das variáveis
+        c = a; // a variável 'c' receberá o valor de a (10)
+        a = b; // a variável 'a' receberá o valor de b (20)
+        b = c; // a variável 'b' receberá o novo valor atribuido à variável c (10)
+        c = null; // a variável 'c' recebe seu antigo valor (null)
+        
+        // imprimindo o valor das variáveis após a alteração
+        document.write('<em>Os valores das variáveis, após alteração, são: </em><br>');
+        document.write('O novo valor da variável "a" é = ' + a + '<br>');
+        document.write('O novo valor da variável "b" é = ' + b + '<br>');
+        document.write('O valor da variável "c" é = ' + c + '<br>');
+    </script>
+</body>
+</html>

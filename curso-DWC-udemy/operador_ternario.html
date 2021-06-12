@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+    <h1>Operador Ternário</h1>
+
+    <!-- 
+        Sintaxe:
+        variável = <condição> ? <caso seja verdadeiro> : <caso seja falso>
+     -->
+
+     <script>
+        let nota = prompt('Digite a nota do aluno: ');
+        let faltas = prompt('Digite a quantidade de faltas do aluno: ');
+        let media = 7;
+        let faltas_maximas = 15;
+
+        /*
+        *** código usando if else ***
+
+        if(nota >= media && faltas <= faltas_maximas) {
+            document.write('Aprovado');
+        } else {
+            document.write('Reprovado');
+        }
+        */
+
+        /*
+        *** código usando operador ternário ***
+        */
+
+        let resultado = (nota >= media && faltas <= faltas_maximas) ? 'Aprovado' : 'Reprovado';
+        document.write(resultado);
+
+        document.write('<br>');
+
+        // outra forma de imprimir o resultado diretamente do operador ternário
+        let final = (nota >= media && faltas <= faltas_maximas) ? document.write('Aprovado') : document.write('Reprovado');
+     </script>
+
+</body>
+</html>
