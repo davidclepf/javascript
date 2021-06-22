@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Eventos Mouse</title>
+
+    <script>
+        function acao() {
+            alert('Evento Disparado!');
+        }
+        function acao2() {
+            alert('O cursor do mouse deixou a região do elemento')
+        }
+    </script>
+</head>
+<body>
+    <h1>Eventos Mouse</h1>
+    <h2>onclick</h2>
+    <p>Dispara um evento com o click do mouse</p>
+    <div onclick="acao()" style="background-color: #BBB; width: 150px; height: 150px;"></div>
+
+    <h2>ondblclick</h2>
+    <p>Dispara um evento com dois clicks do mouse</p>
+    <div ondblclick="acao()" style="background-color: #BBB; width: 150px; height: 150px;"></div>
+
+    <h2>onmouseup</h2>
+    <p>Dispara um evento quando o botoão do mouse é solto, após ser precionado</p>
+    <div onmouseup="acao()" style="background-color: #BBB; width: 150px; height: 150px;"></div>
+
+    <h2>onmouseover</h2>
+    <p>Dispara um evento ao passar o cursor do mouse sobre</p>
+    <div onmouseover="acao()" style="background-color: #BBB; width: 150px; height: 150px;"></div>
+
+    <h2>onmouseout</h2>
+    <p>Dispara um evento quando o cursor do mouse sai de cima do objeto</p>
+    <div onmouseout="acao()" style="background-color: #BBB; width: 150px; height: 150px;"></div>
+
+    <h2>Podemos também combinar mais de um evento</h2>
+
+    <p>
+        Combinando o evento onclick (para disparar a função 1) e onmouseout (para disparar a função 2)
+    </p>
+    <div onclick="acao()" onmouseout="acao2()" style="background-color: #BBB; width: 150px; height: 150px;"></div>
+
+    <br>
+
+    <p>
+        <b>Obs:</b> Nem todos os eventos estão disponíveis para todos os elementos html. Na dúvida o melhor é consultar a documantação no endereço <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">https://www.w3schools.com/jsref/dom_obj_event.asp</a>
+    </p>
+
+    
+</body>
+</html>

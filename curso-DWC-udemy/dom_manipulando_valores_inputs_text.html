@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - DOM Manipulando Valores</title>
+
+    <script>
+        function distribuiCaracter() {
+            // selecionando o valor digitado através do id e atribuindo à uma variável
+            var caracter = document.getElementById('entrada').value;
+
+            // limpar o campo de digitação
+            document.getElementById('entrada').value = '';
+
+            // utilizando o método nativo trim() para limpar espaços em branco entre os caracteres
+            caracter.trim();
+
+            switch(caracter) {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                // adicionar o caracter no campo referente a números
+                    // Selecionando o caracter digitado
+                    document.getElementById('numeros').value = caracter;
+                    break;
+                    default:
+                    // adicionar o caracter no campo referente a letras
+                        // Selecionando o caracter digitado
+                        document.getElementById('letras').value = caracter;
+                
+                // no momento que um caracter é digitado o caracter anterior é sobrescrito. Se quisermos manter um histórico, devemos fazer uma concatenação na entrada do valor do caracter '...value += caracter'
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>DOM - Manipulando Valores Input Text</h1>
+
+    <!-- Receber caracteres no campo de entrada de texto e verificar se são letras ou números -->
+
+    <!-- declarando o evento 'onekeyup' que chamará a função 'distribuiCaracter' -->
+    <input type="text" placeholder="Digite um caracter aqui" onkeyup="distribuiCaracter()" id="entrada">
+    <hr>
+    <span>Letras: </span>
+    <input type="text" disabled="disabled" id="letras">
+    <span>Números: </span>
+    <input type="text" disabled="disabled" id="numeros">
+  
+
+</body>
+</html>

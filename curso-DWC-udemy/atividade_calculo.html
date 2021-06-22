@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <p><strong>
+    1) Crie uma aplicação para efetuar o cálculo do índice de massa corporal. <br>
+    Considere os seguintes critérios: </strong></p>
+    
+    <ol>
+        <li> 
+            Ao executar o script a aplicação deve solicitar a entrada do nome da pessoa. 
+        </li>
+        <br>
+        <li>
+            Na  sequência  a  aplicação  deve  solicitar  que  seja  informada  a  altura  da  pessoa  em centímetros. 
+        </li>
+        <br>
+        <li>
+            Na sequência a aplicação deve solicitar que seja informado o peso da pessoa. 
+        </li>
+        <br>
+        <li>    
+            Após as estradas de dados, atente-se a conversão das informações para dados do tipo float. 
+        </li>
+        <br>
+        <li>
+            Converta  a  altura  recebida  em  centímetros  para  metros.  (basta  dividir  a  altura  por 100). 
+        </li>
+        <br>
+        <li>
+            Internamente a aplicação deve executar o cálculo do índice de massa corporal através da expressão: M = peso (quilos) ÷ altura² 
+        </li>
+        <br>
+        <li>
+            Após  identificar  o  índice  de  massa  corporal  o  sistema  deverá  classificar  em  faixas descritivas utilizando os critérios abaixo: 
+            <ol type="a">
+                <li>
+                    Se M estiver abaixo de 16 : Baixo peso muito grave 
+                </li>
+                <li>
+                    Se M estiver entre 16 e 16,99:  Baixo peso grave 
+                </li>
+                <li>
+                    Se M estiver entre 17 e 18,49: Baixo peso 
+                </li>
+                <li>
+                    Se M estiver entre 18,50 e 24,99: Peso normal 
+                </li>
+                <li>
+                    Se M estiver entre 25 e 29,99: Sobrepeso 
+                </li>
+                <li>
+                    Se M estiver entre 30 e 34,99: Obesidade grau I 
+                </li>
+                <li>
+                    Se M estiver entre 35 e 39,99: Obesidade grau II 
+                </li>
+                <li>
+                    Se M for maior que 40: Obesidade grau III
+                </li>
+            </ol>
+        </li>
+        <br>
+        <li>Ao término o sistema deve fornecer a seguinte saída para o usuário: <br>
+            “'Nome' possui  índice  de  massa  corporal  igual  a 'm',  sendo  classificado  como: 'classificacao'.” 
+        </li>
+    </ol>    
+        *As informações em vermelho são variáveis e devem ser substituídas pelos seus respectivos valores calculadas dentro da aplicação. 
+
+        
+<!-- ####################################################### -->
+    
+    <h3>Resolução</h3>
+
+    <script>
+
+        
+        // criando as variáveis para receber os dados
+        let nome = prompt('Informe o nome: ');
+        let altura = prompt('Informe a altura em centímetros: ');
+        let peso = prompt('Informe o peso: ');
+
+        // convertendo os dados para float
+        altura = parseFloat(altura);
+        peso = parseFloat(peso);
+
+        // convertendo a altura para metros
+        altura /= 100;
+        
+        let m = peso / altura ** 2;
+        let classificacao = null;
+
+        // Resolução usando If Else
+        document.write('<h4>Usando If Else</h4>')
+
+        if (m < 16) {
+            classificacao = 'Baixo peso. Muito grave!';
+        } else if (m <= 16.99) {
+            classificacao = 'Baixo peso. Grave!';
+        } else if (m <= 18.49) {
+            classificacao = 'Baixo peso!';
+        } else if (m <= 24.99) {
+            classificacao = 'Peso normal';
+        } else if (m <= 29.99) {
+            classificacao = 'Sobrepeso!';
+        } else if (m <= 34.99) {
+            classificacao = 'Obesidade garu I!';
+        } else if (m <= 39.99) {
+            classificacao = 'Obesidade garu II!';
+        } else {
+            classificacao = 'Obesidade grau III';
+        }
+
+        document.write(`${nome} possui índice de massa corporal igual a ${m}, sendo classificado como: ${classificacao}`);
+        document.write('<br>');
+        
+        // Resolução usando Switch
+        document.write('<h4>Usando switch</h4>')
+
+        switch (m) {
+            case m < 16:
+                classificacao = 'Baixo peso. Muito grave!';
+                break;
+
+            case m <= 16.99:
+                classificacao = 'Baixo peso. Grave!';
+                break;
+
+            case m <= 18.49: 
+                classificacao = 'Baixo peso!';
+                break;
+
+            case m <= 24.99: 
+                classificacao = 'Peso normal';
+                break;
+
+            case m <= 29.99: 
+                classificacao = 'Sobrepeso!';
+                break;
+
+            case m <= 34.99: 
+                classificacao = 'Obesidade garu I!';
+                break;
+                
+            case m <= 39.99: 
+                classificacao = 'Obesidade garu II!';
+                break;
+
+            case m > 40:
+                classificacao = 'Obesidade grau III';
+                break;
+        }
+
+        document.write(`${nome} possui índice de massa corporal igual a ${m}, sendo classificado como: ${classificacao}`);
+        
+    </script>
+</body>
+</html>

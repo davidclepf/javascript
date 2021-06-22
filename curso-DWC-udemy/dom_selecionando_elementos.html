@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - DOM Selecionado Elementos</title>
+</head>
+<body>
+    <h1>DOM - Selecionando Elementos</h1>
+
+    <input 
+        type="text"
+        placeholder="Digite seu nome: "
+        id="nome_usuario"
+        class="campo_texto"   
+        name="nome" 
+    >
+    <br><br>
+
+    <h3>getElementById()</h3>
+    <p>Seleciona um elemento apartir de um determinado ID.
+    <br><b>Ex:</b> console.log(document.getElementById('nome_usuario')) </p>
+
+    <h3>getElementsByTagName()</h3>
+    <p>Seleciona elementos apartir do nome de uma determinada tag. Serão selecionados todos os elementos pertencentes à tag informada.
+    <br><b>Ex:</b> console.log(document.getElementsByTagName('input')) </p>
+
+    <h3>getElementsByClassName()</h3>
+    <p>Seleciona elementos apartir de uma determinada classe. Serão selecionados todos os elementos pertencentes à classe informada.
+    <br><b>Ex:</b> console.log(document.getElementsByClassName('campo_texto')) </p>
+
+    <h3>getElementsByName()</h3>
+    <p>Seleciona elementos apartir de um determinado nome. Serão selecionados todos os elementos que possuirem o nome informada.
+    <br><b>Ex:</b> console.log(document.getElementsByName('nome')) </p>
+
+
+
+    <script>
+        console.log(document.getElementById('nome_usuario'));
+        console.log(document.getElementsByTagName('input'));
+        console.log(document.getElementsByClassName('campo_texto'));
+        console.log(document.getElementsByName('nome'));
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - DOM Manipulando Classes Elementos </title>
+
+    <style>
+        .estilo1 {
+            background: #FF0000;
+            color: #FFF;
+        }
+        .estilo2 {
+            width: 400px;
+            height: 50px;
+            background-color: blue;
+            text-align: center;
+            font-size: 25px;
+            color: #FFF;
+            padding: 25px;            
+        }
+    </style>
+
+    <script>
+        function modificaClasse() {
+            /* acessando o elemento pelo id e alterando sua classe de 'estilo1' para 'estilo2' através do 'className' */
+            document.getElementById('mensagem').className = 'estilo2'
+        }
+    </script>
+   
+</head>
+<body>
+    <h1>DOM - Manipulando Classes Elementos</h1>
+
+   <div id="mensagem" class="estilo1">Modificando a classe do elemento</div>
+   <hr>
+   <!-- ao clicar no botão a função 'modificaClasse' é invocada -->
+   <button type="button" onclick="modificaClasse()">Aplicar classe</button>
+  
+
+</body>
+</html>

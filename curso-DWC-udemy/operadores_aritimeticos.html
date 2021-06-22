@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+    <h1>Operadores Aritiméticos</h1>
+    <p>
+        Dada as variáveis: <br>
+        num1 = 9 <br>
+        num2 = 2 <br>
+    </p>
+
+    <script>
+        let num1 = prompt("Digite o primeiro número: ");
+        let num2 = prompt("Digite o segundo número: ");
+
+        // As variáveis recebidas pelo 'prompt' são do tipo string, para que a soma aconteça corretamente é necessário fazer a converção para int, caso contrário será feita a concatenação.
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+
+        document.write('A soma entre ' + num1 + ' e ' + num2 + ' é igual a ' + (num1 + num2));
+        document.write('<br> A subtração entre ' + num1 + ' e ' + num2 + ' é igual a ' + (num1 - num2));
+        document.write('<br> A multiplicação entre ' + num1 + ' e ' + num2 + ' é igual a ' + (num1 * num2));
+        document.write('<br> A divisão entre ' + num1 + ' e ' + num2 + ' é igual a ' + (num1 / num2));
+        document.write('<br> O módulo (resto) da divisão entre ' + num1 + ' e ' + num2 + ' é igual a ' + (num1 % num2))
+        document.write('<br> O incremento do número ' + num1 + ' é ' + ++num1 + ' e o decremento do ' + num2 + ' é ' + ++num2)
+        document.write('<br> O decremento do número ' + num1 + ' é ' + --num1 + ' e o decremento do ' + num2 + ' é ' + --num2)
+        document.write("<br><br><b>OBS:</b> Usando o pré-incremento ou pré-decremento ++num ou --num a alteração de valor será feita na instrução onde está sendo utilizado, já no pós-incremento ou pós-decremento num++ ou num-- a alteração será feita, porém o valor alterado só estará disponível na próxima vez que a variável for invocada.")
+
+        /* 
+            // atribuindo um valor à variável teste
+            let teste = 10;
+
+            // adicionando 5 ao valor da variável. Nesse caso o novo valor seria 15
+            teste = teste + 5
+            // a forma simplificada e que terá o mesmo resultado é:
+            teste += 5
+            
+            // o mesmo princípipo vale para as outras operações:
+            teste += 5
+            teste -= 5
+            teste *= 5
+            teste /= 5
+            teste %= 5
+
+        */
+    </script>
+</body>
+</html>

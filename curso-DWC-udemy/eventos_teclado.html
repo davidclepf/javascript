@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript - Eventos Teclado</title>
+
+    <script>
+        function acao1() {
+            alert('Evento Disparado!');
+        }
+    </script>
+</head>
+<body>
+    <h1>Eventos Teclado</h1>
+
+    <h2>onkeydown</h2>
+    <p>Dispara um evento quando uma tecla é precionada</p>
+    <input onkeydown="acao1()" type="text">
+
+    <h2>onkeyup</h2>
+    <p>Dispara um evento quando uma tecla é liberada</p>
+    <input onkeyup="acao1()" type="text">
+
+    <h2>onkeypress</h2>
+    <p>Dispara um evento quando uma tecla é precionada. <br>
+    <b>Obs: </b>Funciona somente quando a tecla pressionada é um caractere. Não funcionará com teclas como control, shift ...</p>
+    <input onkeypress="acao1()" type="text">
+    
+    
+</body>
+</html>

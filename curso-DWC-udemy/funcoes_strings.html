@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Funções Strings</title>
+
+    <script>
+        let nome = 'Jorge Sant Ana';
+        document.write(nome + '<br>')
+
+        // propriedade length (retorna o tamanho da string)
+        document.write(nome.length);
+        document.write('<br>');
+        
+        // charAt() - retorna o caractere do índice informado
+        document.write(nome.charAt(7));
+        document.write('<br>');
+        
+        // indexOf() - retorna a posição da primeira ocorrência de uma string. Obs: faz diferença entre maiúscula e minúscula
+        document.write(nome.indexOf('a'));
+        document.write('<br>');
+        
+        // replace() - faz a substituição de uma string, ou parte dela, por outra
+        document.write(nome.replace('Sant Ana', 'Silva'))
+        document.write('<br>');
+
+        // substr() - retorna uma parte de uma string. O primeiro parâmetro onde será o início e o segundo é a qde de caracteres (incluindo o início) que serão retornados
+        document.write(nome.substr(6, 4));      
+        document.write('<br>');
+        
+        // toLowerCase() - converte todos os caracters de uma string para minúscula
+        document.write(nome.toLowerCase());
+        document.write('<br>');
+        
+        // toUpperCase() - converte todos os caracters de uma string para maiúscula
+        document.write(nome.toLocaleUpperCase());
+        document.write('<br>');
+
+        //trim - remove os espaços nos caracteres das extremidades de uma string
+        nome = ' Jorge Sant Ana ';
+        document.write(`- ${nome} -<br>`);
+        document.write('-' + nome.trim() +  '-<br>');
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

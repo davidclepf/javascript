@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Curso de JavaScript - Funções Datas</title>
+
+    <script>
+        // Date() retorna a data de acordo com o sistema operacional em que está rodando
+        let data = new Date();
+        document.write(data + '<br>');
+        //Mon Jun 14 2021 15:13:06 GMT-0300 (Horário Padrão de Brasília)
+
+        // retorna somente o dia atual de acordo com o sistema
+        document.write(data.getDate() + '<br>');
+        
+        // retorna somente o mês atual de acordo com o sistema
+        document.write(data.getMonth() + 1 + '<br>');
+        // Obs: é necessário somar 1 ao mês, pois a contagem começa com 0 (janeiro seria o mês 0)
+        
+        // retorna somente o ano atual de acordo com o sistema
+        document.write(data.getFullYear() + '<br>');
+
+        // exibindo a data atual no formato dia/mês/ano
+        document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear());
+
+        document.write('<br>');
+
+        // exibindo a hora no formato 'hora:minutos:segundos'
+        document.write(data.getHours() + ':' + data.getMinutes() + ':' + data.getSeconds())
+
+        document.write('<hr>')
+
+        document.write('<p><b>Data Atual</b></p>');
+        document.write(Date());
+        
+        // 
+        document.write('<p><b>Adicionando dias à data atual</b></p>');
+        
+        // convertendo a data para string
+        data.toString()
+        
+        // adicionando 10 dias à data atual
+        data.setDate(data.getDate() + 10)
+        document.write(data.toString())
+        
+        document.write('<p><b>Subtraindo dias à data atual</b></p>');
+        // atribuindo a data atual novamente
+        data = new Date();
+        // subtraindo 5 dias à data atual
+        data.setDate(data.getDate() - 5);
+        document.write(data.toString());
+        
+        document.write('<p><b>Adicionando meses à data atual</b></p>');
+        // atribuindo a data atual novamente
+        data = new Date();
+        // subtraindo 6 meses à data atual
+        data.setMonth(data.getMonth() + 6);
+        document.write(data.toString());
+
+        document.write('<p><b>Adicionando anos à data atual</b></p>');
+        // atribuindo a data atual novamente
+        data = new Date();
+        // subtraindo 12 anos à data atual
+        data.setFullYear(data.getFullYear() + 12);
+        document.write(data.toString());
+
+        document.write('<br>');
+        document.write('<hr>');
+
+    /* ******************************************************************************************** */
+
+    document.write('<hr>');
+
+    document.write('<p><b>Calculando a diferença de dias entre duas datas.</b></p>');
+    // definindo os valores para a primeira data
+    // ano, mês (os meses vão de 0 à 11) e dias
+    var data1 = new Date(2020, 11, 12);
+
+    // definindo os valores para a segunda data
+    var data2 = new Date(1980, 11, 12);
+
+    // exibindo a representação textual das datas 
+    document.write('<b>A data1 é: </b>' + data1.toString());
+    document.write('<br><b>A data2 é: </b>' + data2.toString());
+
+    document.write('<br><br>');
+    
+    // convertendo as datas com getTime().
+    //getTime() converte uma data em milisegundos levando em conta a data início Unix (1 de janeiro de 1970)
+    document.write(data1.getTime());
+    document.write('<br>');
+    document.write(data2.getTime());
+    
+    document.write('<br><br>');
+    
+    // calculando a diferença (em milesegundos) entre a data 1 e a data 2
+    var milisegundos_entre_datas = data1.getTime() - data2.getTime();
+    document.write(milisegundos_entre_datas);
+    document.write('<br>');
+    
+    // convertendo de milesegundos para dias
+    // cada minuto tem 60 segundos e cada segundo tem 1000 milisegundos
+    // calculando a quantidade de milisegundos de um dia
+    var milisegundos_dia = 1*24*60*60*1000;
+    document.write(`1 dia tem: ${milisegundos_dia} milisegundos`);
+    
+    document.write('<br>');
+
+    // convertendo a difetença entre os dias em milesgundos para dias
+    document.write('A difetença entre a data1 e a data2 é de: ' + milisegundos_entre_datas / milisegundos_dia + ' dias');
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
