@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Funções Arrow Function</title>
+
+</head>
+<body>
+    <h1>Funções Arrow Function</h1>
+
+    <script>
+
+        // função anônima
+        let expoente = function(x) {
+            return x * x;
+        }
+        document.write(`Resultado da função anônima = ${expoente(2)}<br>`);
+                
+        // arrow function
+        // executa exatamente a mesma função
+        let expoente2 = (x) => {
+            return x*x
+        }
+        document.write(`Resultado da arrow function = ${expoente2(3)} <br>`);
+        
+        // em caso de arrow function com apenas um parâmetro pode ser simplificado
+        let expoente3 = x => x * x; // return está implícito
+        // ou
+        // let expoente3 = (x) => x * x;
+        document.write(`Resultado da arrow function simplificada = ${expoente3(4)} <br>`);
+
+        document.write('<br>');
+
+        /* 
+            Função Par ou Ímpar
+        */
+
+        // função anônima
+        let parOuImpar = function(numero) {
+            if(numero % 2 === 0) {
+                return 'par';
+            } else {
+                return 'ímpar';
+            }
+        }
+        document.write(parOuImpar(6) + '<br>');
+        
+        // arrow function
+        let parOuImpar2 = numero => {
+            if(numero % 2 === 0) {
+                return 'par';
+            } else {
+                return 'ímpar';
+            }
+        }
+        document.write(parOuImpar2(5) + '<br>');
+        
+        
+        // arrow function com operador ternário
+        let parOuImpar3 = numero => numero % 2 === 0 ? 'par': 'ímpar'; // return implícito
+            
+        document.write(parOuImpar3(7) + '<br>');
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

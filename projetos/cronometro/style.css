@@ -1,0 +1,45 @@
+
+ body {
+    background: rgb(25, 24, 29);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    height:100%;
+}
+
+.form-control {
+    background-color: rgb(2, 47, 105);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+h2 {
+    padding-bottom: 30px;
+}
+
+p {
+    padding-bottom: 40px;
+    font-size: 1.5em;
+}
+.wrapper {
+    width: 800px;
+    margin: 70px auto;
+    color:#FFF;
+    text-align:center;
+}
+
+#segundos, #centSegundos, #minutos{
+  font-size:2em;
+}
+
+.btn{
+    color:#FFF;
+    border: solid 1px #FFF;
+    cursor:pointer;
+    font-weight: bold;
+    padding:18px 10px;
+    width:180px;
+    margin: 10px;
+}
+
+.divisor {
+    font-size: 1.6em;
+}

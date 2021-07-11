@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - While</title>
+</head>
+<body>
+
+    <h1>While</h1>
+    <p>No laço de repetição while a condição especificada é verificada antes da execução do código e o mesmo só será executado se a condição for verdadeira.</p>
+
+    <script>
+        let x = 1;
+
+        // o laço se repetirá enqunato x for menor ou igual à 10
+        while(x <= 10) {
+            document.write(`${x} <br>`);
+            // incrementando a número à x
+            x++
+        }
+
+        document.write('<br>')
+        document.write('<h3>Break</h3>')
+        
+        let y = 1;
+        // o laço se repetirá enquanto y for menor ou igual a 10
+        while(y <= 10) {
+            document.write(y + '<br>');
+            // se y for idêntico à 5 o 'break' será chamado
+            if(y === 5) {
+                // o break encerra o laço de repetição
+                break;
+            }
+            // incremento
+            y++
+        }
+        
+        document.write('<br>')
+        document.write('<h3>Continue</h3>')
+        
+        let z = 1;
+
+        while(z <= 10) {
+            // 'continue' faz com que o código pule para a próxima instrução sem executar a instrução atual.
+            // por isso é importante declarar o incremento antes do continue
+            z++
+            // o número 5 não será exibido, pois essa instrução será pulada
+            if(z === 5) {
+                continue;
+            }
+
+            document.write(z + '<br>')
+        }
+    </script>
+    
+</body>
+</html>

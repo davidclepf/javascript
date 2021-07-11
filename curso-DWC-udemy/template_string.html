@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Template String</title>
+</head>
+<body>
+    <h1>Template Strings</h1>
+
+    <p>É um recurso  que possibilita, dentro de uma string, abrir uma janela para o processador JavaScript interpretar a codificação inserida entre chaves ('{}') e interpolar o resultado dessa interpretação ao restante da string.</p>
+    <p><b>Ex:</b>Para fazer a interpolação de um texto com variáveis ao invés de usarmos '+' para fazer a interpolação usariamos o código entre crases (` `) e a variável dentro de chaves precedidas por um cifrão (${}). <br>
+    <b>Interpolação normal: </b>'O nome iformado é ' + nome + 'e a idade é ' + idade + 'anos.'<br>
+    <b>Template String = </b> `O nome informado é ${nome} e a idade é ${idade} anos. `</p>
+
+    <br>
+
+    <script>
+        let nome = 'João';
+        let idade = 67;
+
+        // interpolação usando '+'
+        document.write('O nome informado é ' + nome + 'e a idade é ' + idade + 'anos. <br>')
+
+        // usando telplate string
+        document.write(`O nome informado é ${nome} e a idade é ${idade} anos.<br>`)
+        // é possível imprimir em várias linhas no console.
+        console.log(`
+        O nome informado é 
+        ${nome} e a idade é 
+        ${idade} anos.
+        `)
+        
+       // outros exemplos
+       document.write(`7 * 7 = ${7*7} <br>`);
+
+       // com função
+       function calcular(x, y){
+           return x * y;
+       }
+       document.write(`A multiplicação de 23 * 9 é: ${calcular(23, 9)}`);
+
+
+
+    </script>
+</body>
+</html>

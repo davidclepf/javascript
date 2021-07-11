@@ -1,0 +1,53 @@
+/*  cursor */
+html{
+    cursor: url(imagens/mata_mosca.png) 30 30, auto;
+}
+
+/* Cenário do jogo */
+body{
+    background-image: url(imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Imagem do mosquito*/
+.mosquito1 {
+    width: 50px;
+    height: 50px;
+}
+.mosquito2 {
+    width: 70px;
+    height: 70px;
+}
+.mosquito3 {
+    width: 90px;
+    height: 90px;
+}
+.ladoA {
+    /* define a posição original da imagem */
+    transform: scaleX(1);
+}
+.ladoB {
+    /* define a posição invertida da imagem */
+    transform: scaleX(-1);
+}
+
+/* Status do jogo */
+.painel {
+    position: absolute;
+    width: 190px;
+    left: 0;
+    padding: 10px;
+    bottom: 0;
+    border-top: solid 1px #FFF;
+    background-color: #FFF;
+    opacity: 0.7;
+}
+.vidas {
+    float: left;    
+}
+.cronometro {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}

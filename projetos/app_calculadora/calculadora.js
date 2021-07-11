@@ -6,11 +6,11 @@ function calcular(tipo, valor) {
 
         // se o 'valor' é idêntico a 'c'
         if(valor === 'c') {
-            // limpar o visor (id 'resultado')
+            // limpar o visor. o id 'resultado' receberá uma string vazia como valor
             document.getElementById('resultado').value = '';
         }
 
-        // concatenando a entrada de dados e exibindo no visor
+        // concatenando a entrada de dados com a operação matemática e exibindo no visor
         if(valor === ' + ' || valor === ' - ' || valor === ' * ' || valor === ' / ' || valor === '.') {
             document.getElementById('resultado').value += valor;
         }

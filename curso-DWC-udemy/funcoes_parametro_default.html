@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Funções Parâmetros Default</title>
+
+    <script>
+        // criando uma função
+        function contarUmaHistoria(personagem, atividade, nome_dono) {
+            document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono se chamava ${nome_dono}.<br>`)
+        }
+        contarUmaHistoria();
+        // se não passarmos os parâmetros eles assumirão o valor 'undefined'
+        
+        
+        // criando um função com os valores defualt definidos
+        function contarUmaHistoria2(personagem = 'Tob', atividade = 'brincar', nome_dono = 'Geraldo') {
+            document.write(`<br>Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu/sua dono(a) se chamava ${nome_dono}.<br>`)
+        }
+        // se não for passado nenhum parâmetro, a função assumirá os valores default
+        contarUmaHistoria2();
+
+        // Se passarmos os parâmetros eles serão considerados no lugar dos parâmetros default
+        contarUmaHistoria2('Scooby', 'correr', 'Ana');
+
+        // os parâmetros informados serão setados e os que não forem informados assumirão os valores default
+        contarUmaHistoria2('Scooby', 'correr');
+
+        // caso queiramos deixar os primeiros parâmetros com o valor default devemos passar 'undefined' como parâmetro
+        contarUmaHistoria2(undefined, undefined, 'Maria');
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

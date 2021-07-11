@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - For / In</title>
+</head>
+<body>
+
+    <h1> For/In</h1>
+    
+    <script>
+        const listaPessoas = ['João', 'Maria', 'Ana', 'José', 'Letícia'];
+        document.write(listaPessoas);
+        console.log(listaPessoas);        
+        document.write('<br>')
+        document.write('<br>')
+        
+        for(let x in listaPessoas) {
+            // não é necessário informar um critério de parada. o laço será interrompido automáticamente ao chegar no final do array
+            // o valor retornado na variável x será o valor do índice do array
+            document.write(listaPessoas[x] + '<br>')
+        }
+        for(let x in listaPessoas) {
+            console.log(listaPessoas[x])        
+        }
+        
+    </script>
+    
+</body>
+</html>

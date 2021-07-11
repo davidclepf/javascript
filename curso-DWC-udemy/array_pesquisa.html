@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Array Pesquisa</title>
+</head>
+<body>
+    <h1>Array Pesquisa</h1>
+
+    <p>Para consultarmos qual é o índice de um determinado elemento usamos 'indexOf'. <br>
+    <b>Sintaxe = </b> nome_do_array.indexOf('Nome_do_elemento'). <br>
+    O resultado será o índice do elemento (por exemplo: 1 ou 'a')</p>
+    <span>Caso o elemento não exista será retornado '-1'</span>
+
+    <p></p>
+
+   
+    <script>
+        let lista_frutas = []
+
+        lista_frutas[0] = 'Banana';
+        lista_frutas[1] = 'Maçã';
+        lista_frutas[2] = 'Morango';
+        lista_frutas[3] = 'Uva';
+
+        // consultando o índice do elemento 'Morango'
+        console.log(lista_frutas.indexOf('Morango'))
+
+    </script>
+   
+    
+</body>
+</html>

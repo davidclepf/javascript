@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jogo.js"></script>
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="imagens/coracao_cheio.png" alt="Coração Cheio">
+            <img id="v2" src="imagens/coracao_cheio.png" alt="Coração Cheio">
+            <img id="v3" src="imagens/coracao_cheio.png" alt="Coração Cheio">
+
+        </div>
+
+        <!-- incluindo uma tag e um id para a recuperação do valor do cronometro -->
+        <div class="cronometro">Tempo restante: <span id="cronometro"></span> </div>
+    </div>
+
+    <script>
+        // exibirá o cronometro assim que a pagina carregar
+        document.getElementById('cronometro').innerHTML = tempo;
+
+        posicaoRandomica(); 
+
+        // usando 'setInterval()' para definir a chamada da função 'posicaoRandomica' (que exibirá as moscas) em um intervalo de tempo
+        let criaMosquito = setInterval(function(){
+            posicaoRandomica();
+        }, criaMosquitoTempo);
+    </script>
+    
+</body>
+</html>

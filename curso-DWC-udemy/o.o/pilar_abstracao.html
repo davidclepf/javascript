@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Abstração</title>
+
+    <script>
+        //modelo do objeto
+        class ContaBancaria {
+            //atributos
+            constructor() {
+                this.agencia = 1065;
+                this.numeroConta = 2263352;
+                this.saldo = 150;
+                this.limite = 450;
+            }
+
+            //métodos
+            depositar(valorDeposito) {
+                this.saldo += valorDeposito;
+            }
+
+            sacar(valorSaque) {
+                this.saldo -= valorSaque;
+            }
+
+            consultarSaldo(){
+                return this.saldo;
+            }
+        }
+
+        let x = new ContaBancaria();
+        let y = new ContaBancaria();
+
+        console.log(x.consultarSaldo());
+        x.depositar(630);
+        console.log(x.consultarSaldo());
+        x.sacar(200);
+        console.log(x.consultarSaldo());
+
+        console.log(y)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

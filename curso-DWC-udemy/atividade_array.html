@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Atividade Array</title>
+    
+</head>
+<body>
+
+    <h1>Atividade Array</h1>
+
+    <h4>1) Crie uma aplicação web contendo um campo para entrada de texto (input text) e dois botões (buttons), sendo um botão com a descrição "Adicionar" e outro com a descrição "Ordenar", conforme imagem abaixo:</h4>
+
+    <p>
+    Após criar os elementos de interação com o usuário acima, crie um Array de nome objetos contendo os seguintes valores: </p>
+
+    <p>var objetos = Array('Cadeira', 'Impressora', 'Garfo')</p>
+    <p>Os próximos passos são:</p>
+    <ol type="A">
+        <li>Ao clicar no botão "Adicionar" disparar função que irá:</li>
+        <ul type="disc">
+            <li>
+                Recuperar o valor contido no campo de texto.
+            </li>
+            <li>
+                Verificar se o valor está vazio ou preenchido.
+            </li>
+            <li type="circle">
+                Se vazio, exibir alert com a mensagem "Informe um valor válido".
+            </li>
+            <li type="circle">
+                Se preenchido:
+                <ul type="squard">
+                    <li>
+                        Verificar se o valor informado já existe dentro do Array objetos. <br>
+                    </li>
+                    <li>
+                        Se existir, exibir alert com a mensagem "Objeto já foi adicionado".
+                    </li>
+                    <li>
+                        Se não existir: <br>
+                        • Incluir o valor preenchido no campo dentro do Array. <br>
+                        • Efetuar um console.log do Array para debug (checar se está funcionado).
+                        • Limpar o valor contido no campo de entrada de texto.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <li>
+            Ao clicar no botão "Ordenar" disparar função que irá:
+        </li>
+        <ul type="disc">
+            <li>
+                 Ordenar de forma alfabética os valores do Array de objetos.
+            </li>
+            <li>
+                Efetuar um console.log do Array para debug (checar se está funcionado).
+            </li>
+        </ul>
+    </ol>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- RESOLUÇÃO -->
+
+    <div>
+        <input type="text" id="text" name="text">
+        <button type="submit" id="adicionar" value="Adicionar" onclick="adicionarObjeto()">Adicionar</button>
+        <button type="submit" id="adicionar" value="Ordenar" onclick="ordenarObjetos()">Ordenar</button>
+    </div>
+
+    <script>
+        // criando o array
+        let objetos = ['Cadeira', 'Impressora', 'Garfo'];
+
+        // criando a função 'adicionarObjeto'
+        function adicionarObjeto() {
+            // a variável 'objeto' recebe o valor informado no campo 'text'
+            let objeto = document.getElementById('text').value
+
+            // se o valor informado for diferente de vazio
+            if(objeto != '') {
+                // se o retorno de 'indexOf()' for diferente de -1 significa que o elemento já existe no array
+               if(objetos.indexOf(objeto) != -1) {
+                   alert('Objeto já foi adicionado!');
+                // se não existir é adicionado no final do array com 'push()'
+               } else {
+                   objetos.push(objeto);
+                   console.log(objetos);
+               }
+                document.getElementById('text').value = '';
+            // se o valor informado não for diferente de vazio
+            } else {
+                alert('Informe um valor válido!');
+            }
+        }
+
+        // criando a função para ordenar os elemetos do array
+        function ordenarObjetos() {
+            // 'sort()' ordenará os elementos em ordem alfabética
+            objetos.sort();
+            console.log(objetos);
+        }
+
+        
+            
+      
+      
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Destructuring (Objetos)</title>
+
+    <script>
+
+        /* 
+            Destructuring no Contexto de Objetos
+        */
+
+        let produto = {
+            descricao: 'Notebook',
+            preco: 2850,
+            // outro objeto
+            detalhes: {
+                fabricante: 'abc',
+                modelo: 'xpto'
+            }
+        }
+       
+        // extraindo  a descricao e preco
+        let { descricao, preco } = produto;
+        console.log(descricao, preco);
+        
+        // atribuindo o elemento do objeto à uma variável
+        let { descricao: d, preco: p } = produto;
+        console.log(d, p);
+
+
+        // extraindo elementos do objeto interno
+        let { detalhes: { fabricante, modelo}} = produto;
+        console.log(fabricante, modelo)
+      
+
+        
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

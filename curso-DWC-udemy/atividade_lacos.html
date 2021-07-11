@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Atividade Laços de Repetição</title>
+</head>
+<body>
+
+    <h1> Atividade com Laços de Repetição - For e While</h1>
+    
+    <p><b>1) Baseado no exemplo da aula "Praticando um pouco - Percorrendo e listando itens de Arrays", implemente a mesma solução, porém utilizando o comando 'for' :</b></p>
+
+    <script>
+        document.write()
+        let lista_frutas = [];
+
+        lista_frutas[0] = 'Banana';
+        lista_frutas[1] = 'Maçã';
+        lista_frutas[2] = 'Morango';
+        lista_frutas[3] = 'Uva';
+
+        for(let i = 0; i < lista_frutas.length; i++) {
+            document.write(lista_frutas[i] + '<br>');
+        }       
+    </script>
+
+    <br><hr><br>
+
+    <p><b>2) Baseado no exemplo da aula "Praticando um pouco - Criando uma tabuada de 1 a 10 (laços encadeados)", implemente a mesma solução, porém utilizando o comando 'while' :</b></p>
+    <script>
+       let x = 1;
+       while(x <= 10) {
+           let y = 1;
+           document.write(`<h3>Tabuada de ${x}</h3>`)
+           while(y <= 10) {
+                document.write(`${x} X ${y} = ` + (x * y) + '<br>');
+                y++
+           }
+           x++
+           document.write('<br><hr>')
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Encapsulamento</title>
+
+    <script>
+
+        class Tv {
+
+            constructor() {
+                this.relacaoCanais = [2, 4, 5, 7, 10];
+                this.canalAtivo = 5;
+                this.volume = 6;
+            }
+
+            get canalAtivvo() {
+                return this.canalAtivo;
+            }
+            set canalAtivvo(canal) {
+                if(this.relacaoCanais.indexOf(canal) != -1){
+                    this.canalAtivo = canal;
+                }
+            }
+            
+        }        
+        let tv = new Tv();
+        tv.canalAtivvo = 1
+        console.log(tv.canalAtivvo)
+        console.log(tv.relacaoCanais);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

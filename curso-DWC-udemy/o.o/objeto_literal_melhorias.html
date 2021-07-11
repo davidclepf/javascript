@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Objeto Literal Melhorias</title>
+
+    <script>
+
+        let nome = 'João';
+        let idade = 32;
+        let sexo = 'Masculino';
+        let profissao = 'Programador';
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function() {
+                console.log(`${this.nome}, ${this.idade}, ${this.sexo}, ${this.profissao}`);
+            }
+        }
+        console.log(objeto);
+        objeto.exibirResumo();
+        
+        /* Melhorias */
+        let objeto2 = {
+            // se o nome do valor for o msm da variável não é necessário declará-la
+            nome, 
+            idade,
+            sexo,
+            profissao,
+            // podemos também tirar a palavra 'function'. o resultado será o mesmo.
+            exibirResumo() {
+                console.log(`${this.nome}, ${this.idade}, ${this.sexo}, ${this.profissao}`);
+            }
+        }
+        console.log(objeto2);
+        objeto2.exibirResumo();
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

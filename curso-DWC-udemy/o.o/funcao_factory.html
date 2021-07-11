@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Função Factory</title>
+
+    <script>
+      
+        let Bicicleta1 = {
+            cor: 'Branca',
+            marcha: 'única',
+            aro: 12,
+            pedalar() {
+              console.log('Método pedalar executado')
+            }
+        }
+
+        let Bicicleta2 = {
+            cor: 'Vermelha',
+            marcha: 18,
+            aro: 26,
+            pedalar() {
+                console.log('Método pedalar executado')
+            }
+        }
+
+        console.log(Bicicleta1)
+        console.log(Bicicleta2)
+
+        /* Função Factory */
+        let BiciclataFactory = function(cor, marcha, aro) {
+            return {
+                cor,
+                marcha,
+                aro,
+                pedalar() {
+                    console.log('Método pedalar executado')
+                }
+            }
+        }
+
+        // criando o objeto 'Bicicleta3' chamando a função factory
+        let Bicicleta3 = BiciclataFactory('Laranja', 21, 26);
+        console.log(Bicicleta3);
+        // acessando atributos e métodos do objeto
+        console.log(`Cor = ${Bicicleta3.cor}`);
+        Bicicleta3.pedalar();
+        console.log(Bicicleta3)
+        
+        let Bicicleta4 = BiciclataFactory('Preta', 18, 26);
+        console.log(Bicicleta4)
+        
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

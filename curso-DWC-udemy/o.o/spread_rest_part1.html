@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Spread Rest</title>
+
+    <script>
+
+        /* 
+            CONTEXTO DE SPREAD
+            Podemos utilizar o operador 'spread' usando '...' antes da string
+        */
+
+        //string
+        let tituloArtigo = 'Como utilizar o operador rest/spread'
+
+        // impressão normal
+        console.log(tituloArtigo);
+        // impressão com spread
+        console.log(...tituloArtigo);
+        // impressão com spread dentro de um array
+        console.log([...tituloArtigo]);
+
+        // arrays
+        let listaCursos1 = ['NodeJS e MongoDB', 'ES6, TypeScript e Angular'];
+        let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux'];
+        let listaCursosCompletos = ['Web Completo', 'Android Completo', ...listaCursos1, ...listaCursos2]; // espalhando os arrays 'listaCursos1' e 'listaCursos2' dentro do array 'listaCursosCompletos'
+        console.log(listaCursosCompletos)
+
+        // objetos
+        let pessoa = { nome: 'João', idade: 27};
+        let clone = { endereco: 'Rua Abc', ...pessoa};
+        console.log(clone);
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

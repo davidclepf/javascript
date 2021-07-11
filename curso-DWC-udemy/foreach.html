@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - ForEach</title>
+</head>
+<body>
+
+    <h1> ForEach</h1>
+    <p>Diferente de outras linguagens, como o PHP por exemplo, em JavaScript o comando 'foreach' é aplicado à arrays ele é uma função, não é bem uma estrutura de repetição, porém ele serve para esse próposito e tem uma função muito parecida com o for in.</p>
+
+    <p><b>Sintaxe:</b><br>
+    <i>array.forEach(function(valor, indice, array)){ <br> }</i></p>
+
+    <p><b>No forEach() serão considerados apenas índices numéricos maiores ou iguais à 0. Qualquer outro tipo de índice (alfanumérico, boleano, números negativos..) serão desconsiderados.</b></p>
+
+    <br><hr><br>
+    <script>
+        const listaPessoas = ['João', 'Maria', 'José', 'Ana', 'Viviane', 'Cleiton'];
+        document.write(listaPessoas + '<br><br>');
+
+        listaPessoas.forEach(function(valor, indice, array){
+            document.write(`Índice: ${indice}  | Valor: ${valor} <br>`)
+            // imprimindo o array ele será impresso o número de vezes equivalentes ao número de elementos do array
+            document.write(array + '<br>')
+
+            // substituindo o valor de um determinado elemento
+            if(valor == 'Ana') {
+                array[indice] = 'Novo valor';
+            }
+        }) 
+        document.write(listaPessoas);
+
+        document.write('<br><br><hr><br>');
+        
+        /* como em qq outra função, é possível trabalhar sem utilizar todos os parâmetros */
+        listaPessoas.forEach(function(valor) {
+            document.write(valor + '<br>');
+        });
+        
+        document.write('<br><br><hr><br>');
+
+        /* utilizando a função de callback em uma variável */
+
+        // atribuindo a função callback à variável 'f'
+        let f = function(valor, indice) {
+            document.write(valor, indice + '<br>');
+            console.log(valor, indice)
+        }
+        listaPessoas.forEach(f)
+        
+    </script>
+    
+</body>
+</html>

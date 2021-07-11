@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Var & Let</title>
+
+    
+</head>
+<body>
+    <h1>Var & Let</h1>
+
+    <p>Tanto <b>var</b> quanto <b>let</b> são usados para declarar variáveis, porém existe diferença entre as duas.</p>
+
+    <p>Quando a variável é declarada com <b>let</b> ela ficará restrita ao escopo ao qual foi declarada. <br>
+    Se declarada no escopo global, pooderá ser acessada por qualquer instância dentro do código, mas fora isso, ficará restrita ao bloco de código em que foi declarado.</p>
+
+    <p>Quando a variável é declarada com <b>var</b> ela ficará disponível, além do escopo onde foi declarada, à instância superior. <br>
+    Por exemplo, se a variável for declarada dentro de um bloco if que está dentro de uma função, ela ficará disponível tanto dentro do bloco if quanto dentro da função. <br>
+    Se for declarada dentro de um bloco if dentro do escopo global, ficará disponível tanto dentro do bloco, qunato dentro do escopo global, e consequentemente, para todo o código. <br>
+    A tendência é que o <b>let</b> substitua definitivamente o <b>var</b>, e o mesmo seja descontinuad, pois variáveis declaradas dentro de um bloco, podem acabar sobrescrevendo variáveis fora e causar erros no código.</p>
+
+    <script>
+        // Exemplo com var
+        var serie = 'Friends';
+        {
+            var serie = 'The Walking Dead';
+            console.log(`Dentro do bloco: ${serie}`);
+        }
+        console.log(`Fora do bloco: ${serie}`);
+        // um exemplo de como a variável declarada dentro do bloco sobrescreveu a variável declarada anteriormente
+
+        console.log('\n')
+
+        let serie2 = 'Friends';
+        {
+            let serie2 = 'The Walking Dead';
+            console.log(`Dentro do bloco: ${serie2}`);
+        }
+        console.log(`Fora do bloco: ${serie2}`);
+        // usando let a variável fica restrita ao bloco de código onde foi declarada
+
+
+
+    </script>
+</body>
+</html>

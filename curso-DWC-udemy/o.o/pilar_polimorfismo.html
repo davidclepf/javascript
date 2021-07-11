@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Polimorfismo</title>
+
+    <script>
+        /* 
+            *** Operador Super ***
+
+            Se a classe tiver o operador 'extends' o operador 'super' tem que ser incluido também e deve ficar antes do 'this'.
+        */
+        class Animal {
+            constructor(cor, tamanho, peso) { // recebe parâmetros da classe filha ('Passaro')
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso;
+            }
+            dormir() {
+                console.log('Dormir');
+            }
+        }
+        
+        // usando 'extends' para herdar os atributos e métodos da classe 'Animal'
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso) { // receberá o parâmetro da classe filho
+                // é necessário usar o método 'super()' antes do 'this'
+                super(cor, tamanho, peso) // os parâmetros serão atribuídos à classe pai ('Animal')
+                this.bico = bico;
+            }
+
+            voar() {
+                console.log('Voar');
+            }
+        }
+
+        // herdando a classe 'Passaro'. Como 'Passaro' extende a classe 'Animal' esses atributos e métodos também serão recebidos pela classe 'Papagaio'.
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso) {
+                super('Médio', cor, tamanho, peso); // o parâmetro será atribuido à classe pai (passaro)
+                this.sabeFalar = sabeFalar;
+            }
+            falar() {
+                console.log('Falar');
+            }
+        }
+
+        class Avestruz extends Passaro {
+            constructor(){
+                // é preciso declarar o operador 'super' para ter acesso aos atributos das classes pai
+                super('Grande', 'Brando e preto', 200, 70000)
+
+            }
+            enterrarCabeca(){
+                console.log('Enterrar a cabeça')
+            }
+            // sobrescrevendo um método herdado
+            voar() {
+                console.log('Não sabe voar!')
+            }
+        }
+
+        let papagaio = new Papagaio(true, 'Verde', 25, 300);    
+        console.log(papagaio);
+        papagaio.voar();
+        
+
+        let avestruz = new Avestruz();
+        console.log(avestruz)
+        avestruz.enterrarCabeca();
+        avestruz.voar();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

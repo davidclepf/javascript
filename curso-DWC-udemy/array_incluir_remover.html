@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Array Incluir/Remover</title>
+</head>
+<body>
+    <h1>Array Incluir/Remover</h1>
+
+    <p><b>push -></b> Incere um elemento no final de um array.</p>
+    <p><b>unshift -></b> Incere um elemento no início de um array.</p>
+    <p><b>shift -></b> Exclui um elemento no início de um array.</p>
+    <p><b>pop -></b> Exclui um elemento no final de um array.</p>
+
+    <script>
+        // criando o array lista_frutas
+        var lista_frutas = [];
+
+        // incluindo dois elementos nos índices 0 e 1 do array
+        lista_frutas[0] = 'Banana';
+        lista_frutas[1] = 'Maçã';
+        console.log(lista_frutas)
+
+        //incluir elemento no final do array
+        lista_frutas.push('Uva')
+        console.log(lista_frutas)
+
+        // incluir elemento no início do array
+        lista_frutas.unshift('Morango')
+        console.log(lista_frutas)
+        
+        // excluindo elementos do array
+        // excluindo elemento do final do array(pop)
+        lista_frutas.pop()
+        console.log(lista_frutas)
+
+        // excluindo elemento do inicio do array(shift)
+        lista_frutas.shift()
+        console.log(lista_frutas)
+
+        /* 
+            ** Incluindo e excluindo elementos de um array dentro de outro array **
+        */
+
+        // criando o array 'lista_coisas'
+        var lista_coisas = [];
+        
+        // criando o array 'frutas' dentro do array 'lista_coisas'
+        lista_coisas['frutas'] = [];
+        // criando o array 'pessoas' dentro do array 'lista_coisas'
+        lista_coisas['pessoas'] = [];
+
+        // adicionando elementos ao array 'frutas'
+        lista_coisas['frutas'].push('Banana');
+        console.log(lista_coisas)
+        lista_coisas['frutas'].push('Maçã');
+        console.log(lista_coisas)
+        // adicionando elementos no início array 'frutas'
+        lista_coisas['frutas'].unshift('Morango');
+        console.log(lista_coisas)
+
+        
+        
+        // adicionando elementos ao array 'pessosa'
+        lista_coisas['pessoas'].push('João');
+        console.log(lista_coisas)
+        lista_coisas['pessoas'].push('José');
+        console.log(lista_coisas)
+        // adicionando elementos no início array 'pessoas'
+        lista_coisas['pessoas'].unshift('Maria');
+        console.log(lista_coisas)
+
+        </script>
+    
+</body>
+</html>

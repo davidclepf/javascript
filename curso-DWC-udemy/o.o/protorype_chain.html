@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Prototype</title>
+
+    <script>
+
+        // todo objeto criado herdará de 'object', portanto é possível criar um atributo para object que ficará disoinível para toda aplicação
+        Object.prototype.attr50 = 'Z';
+       
+       // atribuindo objetos às variáveis
+       // atribuindo atributos aos objetos
+       let animal = { attr1: 'a' }; // atributo
+       let vertebrado = { __proto__: animal, attr2: 'b' };
+       let ave = { __proto__: vertebrado, attr3: 'c' };
+       // vertebrado pode herdar de animal e ave pode herdar de vertebrado
+       // com o uso de '__proto__' podemos indicar de quem o objeto deverá herdar
+
+       console.log(ave.attr3, ave.attr2, ave.attr1, ave.attr50)
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

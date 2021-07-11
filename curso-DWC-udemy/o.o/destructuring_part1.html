@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Destructuring (Arrays)</title>
+
+    <script>
+
+        /* 
+            Destructuring no Contexto de Array
+        */
+
+        let frutas = ['Abacaxi', 'Uva', 'Pêra', 'Mamão'];
+
+        // os valores dos elementos do array serão atribuidos às variáveis
+        let [a, b, , c] = frutas; // podemos pular posições no array
+        console.log(a, b, c)
+
+        /* ---------------------------------------------------------------- */
+        
+        let frutas2 = ['Abacaxi', 'Uva', 'Pêra', 'Mamão'];
+        
+        // os valores dos elementos do array serão atribuidos às variáveis
+        let [d, e, f, g, h = 'Banana'] = frutas2; // podemos adicionar elementos no array
+        console.log(d, e, f, g, h)
+        
+        /* ---------------------------------------------------------------- */
+        
+        // recuperando dados dentro de um array multidimensional
+        let coisas = [['Abacaxi', 'Uva', 'Pêra', 'Mamão'],['Maria', 'José', 'João']] // dois arrays dentro do array 'coisas'
+
+        // para extrair o elemento 'José'
+        let [, [,n2]] = coisas;
+        //pulando o primeiro array usando ',', indicando que queremos acessar o segundo array com '[]', dentro dos '[]' pulando o primeiro elemento com ',' e atribuindo o segundo elemento à variàvel 'n2'
+
+        // extraindo a terceira posição do primeiro array
+        let [[, , f3]] = coisas;
+        
+        console.log(n2);
+        console.log(f3);
+
+      
+
+        
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

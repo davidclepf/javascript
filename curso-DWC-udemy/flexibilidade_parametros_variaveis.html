@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curse de Javascript - Flexibilidade de Parâmetros e Parâmetros Variáveis</title>
+
+    
+</head>
+
+<body>
+        <h1>Curso de Javascript - Flexibilidade de Parâmetros e Parâmetros Variáveis</h1>
+
+
+        <script>
+            function soma() {
+
+                // arguments é uma instrução do JavaScript que nos retorna um objeto contendo todos os parâmetros passados para a função 
+                console.log(arguments)
+            }            
+            console.log(soma(7, 5, 3.2))
+
+            function soma() {
+                // percorrendo as posições dos argumentos e recuperando seus valores
+                var resultado = 0;
+                for(var i in arguments) {
+                    console.log(arguments[i]);
+
+                    resultado += arguments[i]; // somando os valores informados como parêmetro
+                }
+                return resultado;              
+            }            
+            console.log(soma(7, 5, 3.2))
+
+
+        </script>
+
+    
+</body>
+</html>

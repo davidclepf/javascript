@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - BOM Timing</title>
+</head>
+<body>
+    <h1>BOM Timing</h1>
+
+    <h2>setTimeout()</h2>
+    <p>Permite executar uma ação uma vez após o  tempo informado (tempo em milisegundos)</p>
+
+    <h2>setInterval()</h2>
+    <p>Permite executar uma ação repetoidamente após o intervalo de tempo informado (tempo em milisegundos)</p>
+
+    <script>
+        /* 
+            **** setTimeout() ****
+         */
+        // exibindo a palavra 'teste' na tela após 2 segundos
+        /* setTimeout(function() { 
+            document.write('Teste <br>')
+        }, 2000); */
+
+
+        /* 
+            **** setInterval() ****
+         */
+        // exibindo a palavra 'teste' na tela no intervalo de 2 segundos
+        //setInterval(function() { document.write('Teste <br>')}, 2000)
+        
+        // exibindo o número 100 e fazendo o decremento a cada 1 segundo
+       /*  let i = 100;
+        setInterval(function(){ document.write(i + '<br>'); i--}, 1000);
+        // o mesmo código, mas quebrando linhas
+        setInterval(function(){ 
+            document.write(i + '<br>')
+            i--
+        }, 1000);  */
+    
+        // exibindo o número 5 e fazendo o decremento a cada 1 segundo e quando chegar a 0 será feito a página será recarregada
+        /* let i = 5;
+        setInterval(function(){
+            document.write(i + '<br>');
+            i--
+
+            if(i === 0) {
+                // location.reload() recarregará a página
+                window.location.reload()
+            }
+        }, 1000); */
+
+        // exibindo o número 5 e fazendo o decremento a cada 1 segundo e quando chegar a 0 o método clearInterval() cancelará a repetição
+        let i = 5;
+        let x = setInterval(function(){
+            document.write(i + '<br>');
+            i--
+
+            if(i === 0) {
+                // location.reload() recarregará a página
+                clearInterval(x)
+            }
+        }, 1000);
+
+        // também pode ser usado o clearTimeout() para o cancelamento do setTimeout()
+
+
+    </script>
+    
+</body>
+</html>

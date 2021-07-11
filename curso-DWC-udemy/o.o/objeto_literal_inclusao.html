@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Objeto Literal Inclusão de Atributos</title>
+
+    <script>
+
+        let pessoa = {
+            nome: 'José',
+            idade: 45
+        }
+        console.log(pessoa);
+        
+        /*  Incluinso atributos */
+        pessoa.sexo = 'Masculino';
+        console.log(pessoa);
+
+        // incluindo um método
+        pessoa.dizerOi = () => console.log("Olá, tudo bem?");
+        pessoa.dizerOi();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

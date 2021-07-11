@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa de JavaScript - O.O Operador Super</title>
+
+    <script>
+        /* 
+            *** Operador Super ***
+
+            Se a classe tiver o operador 'extends' o operador 'super' tem que ser incluido também e deve ficar antes do 'this'.
+        */
+        class Animal {
+            constructor(cor, tamanho, peso) { // recebe parâmetros da classe filha ('Passaro')
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso;
+            }
+            dormir() {
+                console.log('Dormir');
+            }
+        }
+        
+        // usando 'extends' para herdar os atributos e métodos da classe 'Animal'
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso) { // receberá o parâmetro da classe filho
+                // é necessário usar o método 'super()' antes do 'this'
+                super(cor, tamanho, peso) // os parâmetros serão atribuídos à classe pai ('Animal')
+                this.bico = bico;
+            }
+
+            voar() {
+                console.log('Voar');
+            }
+        }
+
+        // herdando a classe 'Passaro'. Como 'Passaro' extende a classe 'Animal' esses atributos e métodos também serão recebidos pela classe 'Papagaio'.
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso) {
+                super('Médio', cor, tamanho, peso); // o parâmetro será atribuido à classe pai (passaro)
+                this.sabeFalar = sabeFalar;
+            }
+            falar() {
+                console.log('Falar');
+            }
+        }
+
+        let papagaio = new Papagaio(true, 'Verde', 25, 300);    
+        let papagaio2 = new Papagaio(false, 'Amarelo', 15, 150);    
+        console.log(papagaio)        
+        console.log(papagaio2)        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

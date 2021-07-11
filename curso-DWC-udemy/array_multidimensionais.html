@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Arrays Multidimensionais</title>
+</head>
+<body>
+    <h1>Arrais Multidimensionais (Arrays de Arrays)</h1>
+    <p><b>São arrays que apontam para outros arrays</b></p>
+
+    <script>
+        // Criando um array 'lista_coisas'
+        var lista_coisas = Array()
+
+        // criando um array 'frutas' dentro do array 'lista_coisas'
+        lista_coisas['frutas'] = Array('Banana', 'Maçã', 'Morango', 'Uva')
+
+        // criando um array 'pessoas' dentro do array 'lista_coisas'
+        lista_coisas['pessoas'] = []
+        lista_coisas['pessoas']['a'] = 'João';
+        lista_coisas['pessoas']['b'] = 'José';
+        lista_coisas['pessoas']['c'] = 'Maria';
+        
+        // Imprimindo o conteúdo do array lista_coisas no console
+        console.log(lista_coisas);
+        // imprimindo o conteúdo do índice 1 do array 'frutas' no navegador
+        document.write(lista_coisas['frutas'][1]);
+        document.write('<br>');
+        // imprimindo o conteúdo do índice 'a' do array 'pessoas' no navegador
+        document.write(lista_coisas['pessoas']['a'])
+
+
+    </script>
+</body>
+</html>

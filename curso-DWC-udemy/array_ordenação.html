@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript - Array Ordenação</title>
+</head>
+<body>
+    <h1>Array Ordenação</h1>
+    <p>Ordenando o array em ordem alfabética.<br>
+    Para ordenar o array usamos 'sort()'. <br>
+    <b>Obs: </b>sort() serve somente para arrays alfanuméricos, não funcionará corretamente com arrays cujo elementos sejam números.</p>
+
+    <br>
+
+
+   
+    <script>
+        var lista_frutas = [];
+
+        lista_frutas[0] = 'Maçã';
+        lista_frutas[1] = 'Uva';
+        lista_frutas[2] = 'Banana';
+        lista_frutas[3] = 'Morango';
+
+        document.write('<p><b>Array antes de ordenar: </b></p>');
+        document.write(lista_frutas);
+        
+        document.write('<p><b>Array depois do uso de sort(): </b></p>');
+        document.write(lista_frutas.sort());
+
+        /* 
+            Para ordenação de arrays com números é necessário a criação de uma função.
+         */
+         var lista_numeros = [];
+
+         lista_numeros[0] = 12;
+         lista_numeros[1] = 40;
+         lista_numeros[2] = 3;
+         lista_numeros[3] = 7;
+         lista_numeros[4] = 19;
+
+         document.write('<p><b>Array númerico antes da ordenação: </b></p>');
+
+         document.write(lista_numeros);
+
+         document.write('<p><b>Array númerico antes da ordenação: </b></p>');
+         document.write(lista_numeros.sort(ordenaNumeros))
+    
+
+         function ordenaNumeros(a, b) {
+             return a - b;
+         }
+
+
+        
+
+
+
+    </script>
+   
+    
+</body>
+</html>
